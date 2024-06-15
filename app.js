@@ -74,7 +74,7 @@ let pidginQuotes = [
 //this gets the quotes and send them at random
 app.get('/pidginQuotes', (req, res) => {
    const randomquote = Math.floor(Math.random() * pidginQuotes.length);
-   res.json(pidginQuotes[randomIndex]);
+   res.json(pidginQuotes[randomquote]);
  });
 
  // allows you to add a new quote
