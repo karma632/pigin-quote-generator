@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-const port = 5000;
+const port =5000;
 const host = 'localhost';
 
 app.use(express.json());
@@ -72,13 +72,14 @@ let pidginQuotes = [
 ];
 
 //this gets the quotes and send them at random
-app.get('/pidginQuotes', (req, res) => {
+app.get('/pidginQuote', (req, res) => {
    const randomquote = Math.floor(Math.random() * pidginQuotes.length);
    res.json(pidginQuotes[randomquote]);
+  // res.json(pidginQuotes);
  });
 
  // allows you to add a new quote
- app.post('/pidginQuotes', (req, res) => {
+ app.post('/pidginQuote', (req, res) => {
    const newQuote = {
      id: pidginQuotes.length + 1,
      text: req.body.text,

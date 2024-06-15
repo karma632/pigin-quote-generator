@@ -3,7 +3,7 @@ var router = express.Router();
 
 //gets the form and renders it
 router.get('/', function(req, res, next) {
-  res.render('pigin')
+  res.render('quote')
 });
 
 module.exports = router;
